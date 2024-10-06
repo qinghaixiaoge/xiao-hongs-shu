@@ -16,7 +16,9 @@
         <div class="slide-content">1</div>
       </swiper-slide>
       <swiper-slide>
-        <div class="slide-content">2</div>
+        <div class="slide-content">
+          <!-- 瀑布流 -->
+        </div>
       </swiper-slide>
       <swiper-slide>
         <div class="slide-content">3</div>
@@ -113,9 +115,7 @@ onUnmounted(() => {
 .home-container {
   .home-swiper-head {
     height: 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbc;
     position: fixed;
     top: 0;
     left: 0;
@@ -135,7 +135,6 @@ onUnmounted(() => {
 
     .swiper-name {
       display: flex;
-
       span {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
@@ -170,9 +169,7 @@ onUnmounted(() => {
     .slide-content {
       height: 50vh;
       background-color: red;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexcc;
     }
   }
 

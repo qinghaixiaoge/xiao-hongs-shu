@@ -1,0 +1,20 @@
+@mixin flexcc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexac{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flexbc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexsc{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

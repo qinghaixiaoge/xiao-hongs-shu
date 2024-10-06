@@ -27,6 +27,7 @@ watch(() => router.currentRoute.value.path, (newValue) => {
 </script>
 <style lang='scss' scoped>
 .tabbar-container {
+    // 根据首屏视口进行定位
     position: absolute;
     left: 0;
     bottom: 0;
