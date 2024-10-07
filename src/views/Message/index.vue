@@ -11,7 +11,6 @@
       <div class="more-loading" v-show="isBottomLoad">
         <i class="iconfont icon-jiazai"></i>
       </div>
-      <!-- 存放底部加载条 -->
     </div>
   </div>
 </template>

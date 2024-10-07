@@ -16,9 +16,8 @@
         <div class="slide-content">1</div>
       </swiper-slide>
       <swiper-slide>
-        <div class="slide-content">
           <!-- 瀑布流 -->
-        </div>
+           <Wall/>
       </swiper-slide>
       <swiper-slide>
         <div class="slide-content">3</div>
@@ -29,6 +28,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import Wall from './Wall.vue';
 import 'swiper/css';
 const moduleList = ref(["关注", "发现", "附近"])
 let mySwiper = null;
@@ -59,7 +59,6 @@ const onProgress = ({ progress }) => {
   let scale = gap <= 0.5 ? gap : 1 - gap
   scale = scale * maxScale + 1
   redLineRef.value.children[0].style.transform = `scaleX(${scale})` */
-
   if (spanLeftArray.length === 0) return
   if (progress < 0 || progress > 1) return
   // 动态计算红线偏移量
