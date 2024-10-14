@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkxiaohongshu"]=self["webpackChunkxiaohongshu"]||[]).push([[519],{3519:function(n,u,r){r.r(u),r.d(u,{default:function(){return h}});var s=r(6768);const e={class:"shop-container"};function o(n,u){return(0,s.uX)(),(0,s.CE)("div",e," 商城 ")}var t=r(1241);const a={},c=(0,t.A)(a,[["render",o]]);var h=c}}]);

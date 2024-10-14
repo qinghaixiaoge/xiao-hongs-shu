@@ -12,15 +12,25 @@
 <script setup>
 import LoadMore from '@/components/LoadMore.vue';
 import MiniCard from '@/components/MiniCard.vue';
+import useHooks from '@/hooks/useHooks';
 import { getData } from '@/mock/getData';
 import { wall } from '@/utils/wall';
-import { ref, onMounted, nextTick, onUnmounted } from 'vue';
+import { ref, onMounted, nextTick, onUnmounted, toRefs, watch } from 'vue';
+const { isRefresh } = toRefs(useHooks.state)
+const { changeRefresh } = useHooks
+watch(() => isRefresh.value, async (newValue) => {
+    if (newValue) {
+        await initCards()
+        changeRefresh(false)
+    }
+})
 const cards = ref([])
 const cardsRef = ref(null)
 let index = 0
 const loadRef = ref(null)
 
 const initCards = async () => {
+    cardsRef.value.parentNode.parentNode.scrollTop = 0
     index = 0
     loadRef.value.style.height = "80px"
     loadRef.value.style.transition = "all 0.5s linear"
@@ -91,7 +101,6 @@ onMounted(() => {
                 // console.log("下拉加载啦啦啦啦啦~~~~~~~");
                 moved = false
                 isLoading = false
-                cardsRef.value.parentNode.parentNode.scrollTop = 0
             } else {
                 loadRef.value.style.height = "0"
                 loadRef.value.style.transition = "all 0.2s linear"

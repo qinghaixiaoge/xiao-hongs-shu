@@ -22,6 +22,10 @@ const routes = [
     {
         path: '/my',
         name: '我',
+        aaa: "333",
+        meta:{
+            auto: true
+        },
         component: () => import('@/views/My')
     }
 ]

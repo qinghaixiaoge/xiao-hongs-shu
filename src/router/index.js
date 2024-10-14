@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import routes from './routes'
 /* let routes = [];
 // 是webpack特有的，适用于动态加载模块，动态生成路由配置，无需手动声明每个路由文件
@@ -15,8 +15,10 @@ getModule.keys().forEach(moduleId => {
   routes = [...routes,...(content.default || content)]
 }); */
 
+console.log(process.env.BASE_URL);
+
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 

@@ -13,11 +13,16 @@
 import routes from '@/router/routes';
 import router from "@/router"
 import { ref, watch } from 'vue';
+import useHooks from "@/hooks/useHooks"
+const { changeRefresh } = useHooks
 const menus = routes
 const path = ref("/")
 const toPath = (p) => {
+    // path.value = p
+    if (p === path.value && p === "/") {
+        changeRefresh(true)
+    }
     router.push({ path: p })
-    path.value = p
 }
 watch(() => router.currentRoute.value.path, (newValue) => {
     path.value = newValue
