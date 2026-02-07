@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkxiaohongshu"]=self["webpackChunkxiaohongshu"]||[]).push([[236],{6236:function(n,u,r){r.r(u),r.d(u,{default:function(){return i}});var e=r(6768);const s={class:"my-container"};function t(n,u){return(0,e.uX)(),(0,e.CE)("div",s," 我 ")}var a=r(1241);const c={},o=(0,a.A)(c,[["render",t]]);var i=o}}]);

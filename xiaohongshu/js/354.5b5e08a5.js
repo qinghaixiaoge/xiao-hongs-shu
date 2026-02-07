@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkxiaohongshu"]=self["webpackChunkxiaohongshu"]||[]).push([[354],{6354:function(n,u,r){r.r(u),r.d(u,{default:function(){return i}});var s=r(6768);const e={class:"publish-container"};function t(n,u){return(0,s.uX)(),(0,s.CE)("div",e," 发布 ")}var a=r(1241);const c={},o=(0,a.A)(c,[["render",t]]);var i=o}}]);

@@ -1,9 +1,9 @@
 import { reactive } from "vue";
-function useState(){
+function useState() {
     const state = reactive({
         isRefresh: false
     })
-    const changeRefresh = (val)=>{
+    const changeRefresh = (val) => {
         state.isRefresh = val
     }
     return {
